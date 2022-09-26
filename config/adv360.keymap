@@ -36,6 +36,7 @@
   
   tab_forward: tab_forward {
             label = "JY_tab_forward";
+            #binding-cells = <0>;
             compatible = "zmk,behavior-macro";
             bindings
                 = <&kp LCTRL>
@@ -46,6 +47,7 @@
         
   tab_backward: tab_backward {
       label = "JY_tab_backward";
+      #binding-cells = <0>;
       compatible = "zmk,behavior-macro";
       bindings
           = <&kp LCTRL>
