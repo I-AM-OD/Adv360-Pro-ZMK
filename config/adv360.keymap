@@ -38,9 +38,9 @@
             label = "JY_tab_forward";
             compatible = "zmk,behavior-macro";
             bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL>
+                = <&kp LCTRL>
+                , <&kp TAB>
+                
                 ;
         };
         
@@ -48,9 +48,10 @@
       label = "JY_tab_backward";
       compatible = "zmk,behavior-macro";
       bindings
-          = <&macro_press &kp LCTRL &kp LSHIFT>
-          , <&macro_tap &kp TAB>
-          , <&macro_release &kp LCTRL &kp LSHIFT>
+          = <&kp LCTRL>
+          , <&kp LSHIFT>
+          , <&kp TAB>
+          
           ;
   };
 
