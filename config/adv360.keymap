@@ -19,28 +19,6 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
-  macros {
-        tab_forward: tab_forward {
-            label = "JY_tab_forward";
-            compatible = "zmk,behavior-macro";
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        
-        tab_backward: tab_backward {
-            label = "JY_tab_backward";
-            compatible = "zmk,behavior-macro";
-            bindings
-                = <&macro_press &kp LCTRL &kp LSHIFT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL &kp LSHIFT>
-                ;
-        };
-    };
-
 
   behaviors {
     #include "macros.dtsi"
@@ -54,6 +32,26 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+  };
+  
+  tab_forward: tab_forward {
+            label = "JY_tab_forward";
+            compatible = "zmk,behavior-macro";
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        
+  tab_backward: tab_backward {
+      label = "JY_tab_backward";
+      compatible = "zmk,behavior-macro";
+      bindings
+          = <&macro_press &kp LCTRL &kp LSHIFT>
+          , <&macro_tap &kp TAB>
+          , <&macro_release &kp LCTRL &kp LSHIFT>
+          ;
   };
 
     keymap {
